@@ -202,6 +202,7 @@
                 android:textSize="@dimen/font_size_13" />
 
             <View
+                android:visibility="gone"
                 android:layout_width="1dp"
                 android:layout_height="15dp"
                 android:layout_marginStart="10dp"
@@ -209,6 +210,7 @@
                 android:background="@color/colorLine" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/forgetPwdTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

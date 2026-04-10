@@ -245,7 +245,7 @@ public class TabActivity extends WKBaseActivity<ActTabMainBinding> {
         });
         wkVBinding.bottomNavigation.setItemIconTintList(null);
         // 根据配置动态显示AI智投和洞察菜单
-        setupDynamicMenuItems();
+//        setupDynamicMenuItems();
         wkVBinding.bottomNavigation.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.i_chat) {
                 long nowTime = WKTimeUtils.getInstance().getCurrentMills();
@@ -261,27 +261,28 @@ public class TabActivity extends WKBaseActivity<ActTabMainBinding> {
             } else if (item.getItemId() == R.id.i_contacts) {
                 wkVBinding.vp.setCurrentItem(1);
                 playAnimation(1);
-            } else if (item.getItemId() == R.id.i_ai_invest) {
-                // AI智投 - 打开WebView
-                String aiInvestUrl = WKConfig.getInstance().getAppConfig().ai_invest_url;
-                if (!TextUtils.isEmpty(aiInvestUrl)) {
-                    showWebView(aiInvestUrl);
-                }
-                return false; // 不切换选中状态
-            } else if (item.getItemId() == R.id.i_insight) {
-                // 洞察 - 打开WebView
-                String insightUrl = WKConfig.getInstance().getAppConfig().insight_url;
-                if (!TextUtils.isEmpty(insightUrl)) {
-                    showWebView(insightUrl);
-                }
-                return false; // 不切换选中状态
             }
+//            else if (item.getItemId() == R.id.i_ai_invest) {
+//                // AI智投 - 打开WebView
+//                String aiInvestUrl = WKConfig.getInstance().getAppConfig().ai_invest_url;
+//                if (!TextUtils.isEmpty(aiInvestUrl)) {
+//                    showWebView(aiInvestUrl);
+//                }
+//                return false; // 不切换选中状态
+//            } else if (item.getItemId() == R.id.i_insight) {
+//                // 洞察 - 打开WebView
+//                String insightUrl = WKConfig.getInstance().getAppConfig().insight_url;
+//                if (!TextUtils.isEmpty(insightUrl)) {
+//                    showWebView(insightUrl);
+//                }
+//                return false; // 不切换选中状态
+//            }
             else if (item.getItemId() == R.id.i_workplace) {
                 wkVBinding.vp.setCurrentItem(2);
                 playAnimation(2);
             }
             else {
-                wkVBinding.vp.setCurrentItem(2);
+                wkVBinding.vp.setCurrentItem(3);
                 playAnimation(3);
             }
             return true;
@@ -355,62 +356,62 @@ public class TabActivity extends WKBaseActivity<ActTabMainBinding> {
     }
 
     // 根据后台配置动态设置AI智投和洞察菜单项
-    private void setupDynamicMenuItems() {
-        String aiInvestUrl = WKConfig.getInstance().getAppConfig().ai_invest_url;
-        String insightUrl = WKConfig.getInstance().getAppConfig().insight_url;
-
-        android.view.Menu menu = wkVBinding.bottomNavigation.getMenu();
-
-        // AI智投菜单项
-        android.view.MenuItem aiInvestItem = menu.findItem(R.id.i_ai_invest);
-        if (aiInvestItem != null) {
-            if (!TextUtils.isEmpty(aiInvestUrl)) {
-                aiInvestItem.setVisible(true);
-                aiInvestItem.setTitle(getString(R.string.tab_text_ai_invest));
-                // 设置图标和文字
-                FrameLayout aiInvestView = wkVBinding.bottomNavigation.findViewById(R.id.i_ai_invest);
-                if (aiInvestView != null) {
-                    RLottieImageView aiInvestIV = new RLottieImageView(this);
-                    aiInvestIV.setImageResource(R.drawable.ai1); // AI智投图标
-                    TextView aiInvestTV = new TextView(this);
-                    Typeface face = Typeface.createFromAsset(getResources().getAssets(), "fonts/mw_bold.ttf");
-                    aiInvestTV.setTypeface(face);
-                    aiInvestTV.setText(R.string.tab_text_ai_invest);
-                    aiInvestTV.setTextColor(ContextCompat.getColor(this, R.color.tab_text_normal));
-                    aiInvestTV.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
-                    aiInvestView.addView(aiInvestIV, LayoutHelper.createFrame(35, 35, Gravity.CENTER | Gravity.TOP, 0, 5, 0, 0));
-                    aiInvestView.addView(aiInvestTV, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER, 0, 15, 0, 0));
-                }
-            } else {
-                aiInvestItem.setVisible(false);
-            }
-        }
-
-        // 洞察菜单项
-        android.view.MenuItem insightItem = menu.findItem(R.id.i_insight);
-        if (insightItem != null) {
-            if (!TextUtils.isEmpty(insightUrl)) {
-                insightItem.setVisible(true);
-                insightItem.setTitle(getString(R.string.tab_text_insight));
-                // 设置图标和文字
-                FrameLayout insightView = wkVBinding.bottomNavigation.findViewById(R.id.i_insight);
-                if (insightView != null) {
-                    RLottieImageView insightIV = new RLottieImageView(this);
-                    insightIV.setImageResource(R.drawable.dc1); // 洞察未选中图标
-                    TextView insightTV = new TextView(this);
-                    Typeface face = Typeface.createFromAsset(getResources().getAssets(), "fonts/mw_bold.ttf");
-                    insightTV.setTypeface(face);
-                    insightTV.setText(R.string.tab_text_insight);
-                    insightTV.setTextColor(ContextCompat.getColor(this, R.color.tab_text_normal));
-                    insightTV.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
-                    insightView.addView(insightIV, LayoutHelper.createFrame(35, 35, Gravity.CENTER | Gravity.TOP, 0, 5, 0, 0));
-                    insightView.addView(insightTV, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER, 0, 15, 0, 0));
-                }
-            } else {
-                insightItem.setVisible(false);
-            }
-        }
-    }
+//    private void setupDynamicMenuItems() {
+//        String aiInvestUrl = WKConfig.getInstance().getAppConfig().ai_invest_url;
+//        String insightUrl = WKConfig.getInstance().getAppConfig().insight_url;
+//
+//        android.view.Menu menu = wkVBinding.bottomNavigation.getMenu();
+//
+//        // AI智投菜单项
+//        android.view.MenuItem aiInvestItem = menu.findItem(R.id.i_ai_invest);
+//        if (aiInvestItem != null) {
+//            if (!TextUtils.isEmpty(aiInvestUrl)) {
+//                aiInvestItem.setVisible(true);
+//                aiInvestItem.setTitle(getString(R.string.tab_text_ai_invest));
+//                // 设置图标和文字
+//                FrameLayout aiInvestView = wkVBinding.bottomNavigation.findViewById(R.id.i_ai_invest);
+//                if (aiInvestView != null) {
+//                    RLottieImageView aiInvestIV = new RLottieImageView(this);
+//                    aiInvestIV.setImageResource(R.drawable.ai1); // AI智投图标
+//                    TextView aiInvestTV = new TextView(this);
+//                    Typeface face = Typeface.createFromAsset(getResources().getAssets(), "fonts/mw_bold.ttf");
+//                    aiInvestTV.setTypeface(face);
+//                    aiInvestTV.setText(R.string.tab_text_ai_invest);
+//                    aiInvestTV.setTextColor(ContextCompat.getColor(this, R.color.tab_text_normal));
+//                    aiInvestTV.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
+//                    aiInvestView.addView(aiInvestIV, LayoutHelper.createFrame(35, 35, Gravity.CENTER | Gravity.TOP, 0, 5, 0, 0));
+//                    aiInvestView.addView(aiInvestTV, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER, 0, 15, 0, 0));
+//                }
+//            } else {
+//                aiInvestItem.setVisible(false);
+//            }
+//        }
+//
+//        // 洞察菜单项
+//        android.view.MenuItem insightItem = menu.findItem(R.id.i_insight);
+//        if (insightItem != null) {
+//            if (!TextUtils.isEmpty(insightUrl)) {
+//                insightItem.setVisible(true);
+//                insightItem.setTitle(getString(R.string.tab_text_insight));
+//                // 设置图标和文字
+//                FrameLayout insightView = wkVBinding.bottomNavigation.findViewById(R.id.i_insight);
+//                if (insightView != null) {
+//                    RLottieImageView insightIV = new RLottieImageView(this);
+//                    insightIV.setImageResource(R.drawable.dc1); // 洞察未选中图标
+//                    TextView insightTV = new TextView(this);
+//                    Typeface face = Typeface.createFromAsset(getResources().getAssets(), "fonts/mw_bold.ttf");
+//                    insightTV.setTypeface(face);
+//                    insightTV.setText(R.string.tab_text_insight);
+//                    insightTV.setTextColor(ContextCompat.getColor(this, R.color.tab_text_normal));
+//                    insightTV.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
+//                    insightView.addView(insightIV, LayoutHelper.createFrame(35, 35, Gravity.CENTER | Gravity.TOP, 0, 5, 0, 0));
+//                    insightView.addView(insightTV, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER, 0, 15, 0, 0));
+//                }
+//            } else {
+//                insightItem.setVisible(false);
+//            }
+//        }
+//    }
 
     @Override
     public Resources getResources() {
