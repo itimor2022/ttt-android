@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity android:name=".ui.WalletActivity" />
+        <activity android:name=".ui.WalletRecordsActivity" />
+        <activity android:name=".ui.RechargeActivity" />
+        <activity android:name=".ui.WithdrawActivity" />
+        <activity android:name=".ui.SetPayPwdActivity" />
+        <activity android:name=".ui.TransferActivity" />
+        <activity android:name=".ui.RedPacketSendActivity" />
+        <activity android:name=".ui.RedPacketOpenActivity" />
+        <activity android:name=".ui.RedPacketDetailActivity" />
+        <activity android:name=".ui.TransferDetailActivity" />
+        <activity android:name=".ui.RealNameVerifyActivity" />
+    </application>
+
+</manifest>

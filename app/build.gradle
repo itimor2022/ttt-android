@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-parcelize'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('../demo.jks')
+            storePassword 'demo1365'
+            keyAlias = 'demo'
+            keyPassword 'demo1365'
+        }
+        release {
+            storeFile file('../demo.jks')
+            storePassword 'demo1365'
+            keyAlias = 'demo'
+            keyPassword 'demo1365'
+        }
+    }
+    namespace 'com.test.demo'
+    compileSdk rootProject.ext.compileSdkVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+    defaultConfig {
+        applicationId "com.test.demo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters "armeabi-v7a", "arm64-v8a"
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+        }
+        compileSdkPreview = "UpsideDownCake"
+        
+        // 高德地图API Key
+        manifestPlaceholders = [
+            AMAP_API_KEY: project.properties['AMAP_API_KEY'] ?: ''
+        ]
+    }
+
+    buildTypes {
+        release {
+            jniDebuggable true
+            //  zipAlignEnabled true   //Zipalign优化
+            minifyEnabled true  // 是否混淆
+            shrinkResources true  // 是否去除无效的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+//            jniDebuggable true
+//            zipAlignEnabled true   //Zipalign优化
+//            minifyEnabled true  // 是否混淆
+//            shrinkResources true  // 是否去除无效的资源文件
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.3.2'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    api project(':wkbase')
+    implementation project(path: ':wkuikit')
+    implementation project(path: ':wklogin')
+    implementation project(path: ':wkscan')
+    implementation project(path: ':wkpush')
+    //*商业模块*
+    implementation project(path: ':wkKeepAlive')//保活
+    implementation project(path: ':wkmoments')//朋友圈
+    implementation project(path: ':wkfavorite')//收藏
+    implementation project(path: ':wkrtc')//音视频模块
+    implementation project(path: ':wksecurity')//安全隐私
+    implementation project(path: ':wkfile')//文件模块
+    implementation project(path: ':wkgroupmanage')//群管模块
+    implementation project(path: ':wkvideo')//视频模块
+    implementation project(path: ':wkadvanced')//旗舰模块
+    implementation project(path: ':wkimageeditor')//图片编辑模块
+    implementation project(path: ':wkricheditor')//富文本模块
+    implementation project(path: ':wkpinnedmessage')//消息置顶模块
+    implementation project(path: ':wksticker')//sticker动画模块
+    implementation project(path: ':wkcustomerservice')//客服模块
+    implementation project(path: ':label')//标签模块
+    implementation project(path: ':wkwallet')//钱包红包模块
+    implementation project(path: ':wkmap')//地图位置模块
+    implementation project(path: ':wkinvite')//邀请码
+}

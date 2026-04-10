@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 主背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="180"
+                android:startColor="#E53935"
+                android:centerColor="#D32F2F"
+                android:endColor="#C62828" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- 顶部装饰 -->
+    <item
+        android:bottom="300dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="180"
+                android:startColor="#EF5350"
+                android:endColor="#E53935" />
+            <corners
+                android:topLeftRadius="16dp"
+                android:topRightRadius="16dp" />
+        </shape>
+    </item>
+</layer-list>
+

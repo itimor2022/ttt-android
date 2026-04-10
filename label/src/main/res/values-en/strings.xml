@@ -1,0 +1,16 @@
+<resources>
+    <string name="k_save">保存</string>
+    <string name="k_delete">del</string>
+    <string name="k_edit">edit</string>
+    <string name="k_label">Tags</string>
+    <string name="k_label_name">Tag Name</string>
+    <string name="k_label_input_name">Such as Family and Friends</string>
+    <string name="k_label_members">Members</string>
+    <string name="k_label_delete">Delete Tag</string>
+    <string name="k_label_create">Create Tag</string>
+    <string name="k_label_create_title">Save</string>
+    <string name="k_label_delete_tips">Contacts in the tag will not be deleted. Delete this tag?</string>
+    <string name="k_label_no_data">No Tags</string>
+    <string name="k_label_no_data_tips">You can divide friends into groups by using tags</string>
+    <string name="k_label_is_null">The Label name cannot be empty</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_location">Choose Location</string>
+    <string name="location_detail">Location Details</string>
+    <string name="confirm">Send</string>
+    <string name="getting_location">Getting location...</string>
+    <string name="location_failed">Location failed, please retry</string>
+    <string name="navigation">Navigation</string>
+    <string name="navigate">Navigate</string>
+    <string name="send_location">Send Location</string>
+    <string name="location_permissions_required">Location permission required</string>
+    <string name="no_map_app">No map app installed</string>
+    <string name="tap_to_view">Tap to view</string>
+    <string name="copy_coordinates">Copy Coordinates</string>
+    <string name="coordinates_copied">Coordinates copied</string>
+    <string name="open_map_failed">Failed to open map</string>
+    <string name="no_map_found">No map app available</string>
+</resources>

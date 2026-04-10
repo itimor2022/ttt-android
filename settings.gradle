@@ -1,0 +1,53 @@
+pluginManagement {
+    repositories {
+        // 阿里云镜像 - 国内加速
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // 阿里云镜像 - 国内加速
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+rootProject.name = "TsddClient"
+include ':MyLibs:rlottie'
+include ':MyLibs:oppopush'
+include ':MyLibs:vivopush'
+include ':app'
+include ':wkbase'
+include ':wkuikit'
+include ':wkscan'
+include ':wklogin'
+include ':wkpush'
+//*商业模块*
+include ':wkKeepAlive'//保活
+include ':wkmoments'//朋友圈
+include ':wkfavorite'//收藏
+include ':wkrtc'//rtc模块
+include ':wksecurity'//安全隐私模块
+include ':wkfile'//文件模块
+include ':wkgroupmanage'//群管模块
+include ':wkvideo'//视频模块
+include ':wkadvanced'//旗舰高级模块
+include ':wkimageeditor'//图片编辑
+include ':wkricheditor'//富文本模块
+include ':wkpinnedmessage'//消息置顶
+include ':wksticker'//sticker动画
+include ':wkcustomerservice'//客服模块
+include ':label'//标签模块
+include ':wkwallet'//钱包红包模块
+include ':wkmap'//地图位置模块
+include ':wkinvite'//邀请码

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 红包主题色 - 暗色模式保持不变 -->
+    <color name="wallet_red_packet_primary">#FA9D3B</color>
+    <color name="wallet_red_packet_bg">#E74C3C</color>
+    <color name="wallet_red_packet_dark">#C0392B</color>
+    <color name="red_packet_color">#FA9D3B</color>
+    
+    <!-- 转账主题色 -->
+    <color name="wallet_transfer_primary">#F39C12</color>
+    <color name="wallet_transfer_bg">#2C2C2C</color>
+    
+    <!-- 钱包通用颜色 -->
+    <color name="wallet_balance_text">#FFFFFF</color>
+    <color name="wallet_card_bg">#1E1E1E</color>
+    <color name="wallet_divider">#333333</color>
+    <color name="wallet_income">#4CAF50</color>
+    <color name="wallet_expense">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    
+    <!-- 状态颜色 -->
+    <color name="wallet_status_pending">#FF9800</color>
+    <color name="wallet_status_success">#4CAF50</color>
+    <color name="wallet_status_failed">#F44336</color>
+</resources>
+

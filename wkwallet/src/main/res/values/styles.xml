@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 底部弹出对话框样式 -->
+    <style name="BottomSheetDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- 支付密码对话框样式 -->
+    <style name="TransparentDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- 密码框样式 -->
+    <style name="PasswordBoxStyle">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:background">@drawable/bg_password_box</item>
+    </style>
+
+    <!-- 密码圆点样式 -->
+    <style name="PasswordDotStyle">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/bg_password_dot</item>
+    </style>
+
+    <!-- 新密码框样式 -->
+    <style name="PasswordBoxStyleNew">
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+        <item name="android:background">@drawable/bg_password_box_new</item>
+    </style>
+
+    <!-- 新密码圆点样式 -->
+    <style name="PasswordDotStyleNew">
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/bg_password_dot</item>
+    </style>
+
+    <!-- 数字键盘按键样式 -->
+    <style name="KeyboardKeyStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 弹窗数字键盘按键样式 -->
+    <style name="KeyboardKeyDialogStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">0.5dp</item>
+        <item name="android:background">@drawable/bg_keyboard_key_dialog</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 红包按钮样式 -->
+    <style name="RedPacketButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+        <item name="android:background">@drawable/bg_red_packet_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 圆形头像 -->
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

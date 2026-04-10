@@ -1,0 +1,9 @@
+<resources>
+    <string name="reset">Reset</string>
+    <string name="my_invite_code">My Invite Code</string>
+    <string name="no_code_tip">You haven\'t generated an invitation code yet. Do you want to generate it now?</string>
+    <string name="reset_code_tip">After resetting the invitation code, the old invitation code can no longer be used. Do you want to reset it?</string>
+    <string name="disable_invite_code">Disable</string>
+    <string name="enable_invite_code">Enable</string>
+    <string name="disabling">Invitation code disabled</string>
+</resources>

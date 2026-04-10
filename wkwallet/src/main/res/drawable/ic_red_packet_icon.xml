@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <!-- 红包背景 -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M22,22m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+    <!-- 红包图案 -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M14,12h16c1.1,0 2,0.9 2,2v16c0,1.1 -0.9,2 -2,2H14c-1.1,0 -2,-0.9 -2,-2V14c0,-1.1 0.9,-2 2,-2z" />
+    <!-- 红包封口 -->
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M12,18h20v2H12z" />
+    <!-- 红包圆心 -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M22,22m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+</vector>
+

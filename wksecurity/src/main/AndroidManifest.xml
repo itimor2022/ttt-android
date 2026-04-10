@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity android:name=".ui.SecurityPrivacyActivity" />
+        <activity android:name=".ui.InputDestroyAccountCodeActivity" />
+        <activity android:name=".ui.ChatPwdActivity" />
+        <activity android:name=".ui.LockScreenPwdActivity" />
+        <activity android:name=".ui.InputLockScreenPwdActivity" />
+        <activity android:name=".ui.DestroyAccountActivity" />
+        <activity android:name=".ui.device.DeviceManageActivity" />
+        <activity
+            android:name=".ui.CheckLockScreenPwdActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.DisconnectScreenSaverActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.BlackListActivity" />
+    </application>
+
+</manifest>

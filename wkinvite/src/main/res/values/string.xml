@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reset">重置</string>
+    <string name="my_invite_code">我的邀请码</string>
+    <string name="no_code_tip">您还未生成邀请码，是否立即生成？</string>
+    <string name="reset_code_tip">重置邀请码后旧的邀请码不可再使用，是否重置？</string>
+    <string name="disable_invite_code">禁用</string>
+    <string name="enable_invite_code">启用</string>
+    <string name="disabling">邀请码禁用中</string>
+</resources>

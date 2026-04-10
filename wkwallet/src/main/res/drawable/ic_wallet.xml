@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 钱包图标 -->
+    <path
+        android:fillColor="#FA9D3B"
+        android:pathData="M21,7H3C2.45,7 2,7.45 2,8V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V8C22,7.45 21.55,7 21,7ZM18,14C17.45,14 17,13.55 17,13C17,12.45 17.45,12 18,12C18.55,12 19,12.45 19,13C19,13.55 18.55,14 18,14Z"/>
+    <path
+        android:fillColor="#FA9D3B"
+        android:pathData="M20,4H4C3.45,4 3,4.45 3,5C3,5.55 3.45,6 4,6H20C20.55,6 21,5.55 21,5C21,4.45 20.55,4 20,4Z"/>
+</vector>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_location">选择位置</string>
+    <string name="location_detail">位置详情</string>
+    <string name="confirm">发送</string>
+    <string name="getting_location">正在定位...</string>
+    <string name="location_failed">定位失败，请重试</string>
+    <string name="navigation">导航</string>
+    <string name="navigate">导航</string>
+    <string name="send_location">发送位置</string>
+    <string name="location_permissions_required">需要位置权限才能使用此功能</string>
+    <string name="no_map_app">未安装地图应用</string>
+    <string name="tap_to_view">点击查看</string>
+    <string name="copy_coordinates">复制坐标</string>
+    <string name="coordinates_copied">坐标已复制</string>
+    <string name="open_map_failed">打开地图失败</string>
+    <string name="no_map_found">未找到可用的地图应用</string>
+</resources>

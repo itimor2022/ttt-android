@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeColor"
+    android:orientation="vertical">
+
+    <include layout="@layout/wk_title_bar_layout" />
+
+    <!-- 内容区域 -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp">
+
+        <!-- 安全提示 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_security_tip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+                android:padding="14dp">
+
+            <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                android:src="@drawable/ic_security_shield"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                    android:lineSpacingExtra="2dp"
+                android:text="@string/pay_pwd_security_tip"
+                android:textColor="@color/colorDark"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+            <!-- 原密码区域（修改密码时显示） -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/oldPasswordCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/layoutColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet_input_old_pay_pwd"
+                        android:textColor="@color/colorDark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/oldPasswordInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp">
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox1"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot1"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox2"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot2"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox3"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot3"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox4"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot4"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox5"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot5"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/oldPwdBox6"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/oldPwdDot6"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 设置密码区域 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/layoutColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 标题 -->
+                <TextView
+                    android:id="@+id/newPwdTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_set_pay_pwd"
+                    android:textColor="@color/colorDark"
+                        android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/pay_password_hint"
+                    android:textColor="@color/color999"
+                    android:textSize="12sp" />
+
+                    <!-- 密码输入框容器 -->
+                <LinearLayout
+                    android:id="@+id/passwordInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                    android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp">
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox1"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot1"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox2"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot2"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox3"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot3"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox4"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot4"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox5"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot5"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pwdBox6"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/pwdDot6"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 确认密码区域 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/layoutColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 标题 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_confirm_pay_pwd"
+                    android:textColor="@color/colorDark"
+                        android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                    <!-- 确认密码输入框容器 -->
+                <LinearLayout
+                    android:id="@+id/confirmPasswordInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                    android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="4dp">
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox1"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot1"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox2"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot2"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox3"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot3"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox4"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot4"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox5"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot5"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/confirmBox6"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_password_box_new">
+
+                            <View
+                                android:id="@+id/confirmDot6"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_password_dot"
+                                android:visibility="invisible" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 错误提示 -->
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="#F44336"
+                android:textSize="13sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 安全数字键盘 -->
+    <LinearLayout
+        android:id="@+id/keyboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutColor"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorLine" />
+
+        <!-- 第一行 1 2 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/key1"
+                style="@style/KeyboardKeyStyle"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/key2"
+                style="@style/KeyboardKeyStyle"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/key3"
+                style="@style/KeyboardKeyStyle"
+                android:text="3" />
+
+        </LinearLayout>
+
+        <!-- 第二行 4 5 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/key4"
+                style="@style/KeyboardKeyStyle"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/key5"
+                style="@style/KeyboardKeyStyle"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/key6"
+                style="@style/KeyboardKeyStyle"
+                android:text="6" />
+
+        </LinearLayout>
+
+        <!-- 第三行 7 8 9 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/key7"
+                style="@style/KeyboardKeyStyle"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/key8"
+                style="@style/KeyboardKeyStyle"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/key9"
+                style="@style/KeyboardKeyStyle"
+                android:text="9" />
+
+        </LinearLayout>
+
+        <!-- 第四行 空 0 删除 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/key0"
+                style="@style/KeyboardKeyStyle"
+                android:text="0" />
+
+            <FrameLayout
+                android:id="@+id/keyDelete"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_keyboard_delete"
+                    app:tint="@color/colorDark" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

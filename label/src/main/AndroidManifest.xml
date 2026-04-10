@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chat.label">
+
+    <application>
+        <activity android:name=".activitys.LabelActivity"  android:exported="false"/>
+        <activity android:name=".activitys.LabelDetailActivity"  android:exported="false"/>
+    </application>
+</manifest>
