@@ -165,7 +165,7 @@ public class TabActivity extends WKBaseActivity<ActTabMainBinding> {
         wkVBinding.bottomNavigation.getOrCreateBadge(R.id.i_workplace).setVisible(false);
         wkVBinding.bottomNavigation.getOrCreateBadge(R.id.i_chat).setVisible(false);
 
-        int iconSize = 35;
+        int iconSize = 25;
 
         FrameLayout view = wkVBinding.bottomNavigation.findViewById(R.id.i_chat);
         msgCounterView = new CounterView(this);
