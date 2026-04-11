@@ -946,12 +946,21 @@ public class ChatFragment extends WKBaseFragment<FragChatConversationLayoutBindi
         
         // 检查新消息的类型
         boolean isOfficialMsg = false;
+
         if (WKSystemAccount.isSystemAccount(msg.channelID)) {
             isOfficialMsg = true;
-        } else if (msg.getWkChannel() != null && 
-                  (msg.getWkChannel().category.equals("system") || 
-                   msg.getWkChannel().category.equals("official"))) {
-            isOfficialMsg = true;
+        } else if (msg.getWkChannel() != null) {
+
+            String category = msg.getWkChannel().category;
+
+            // 把 null 转成 ""
+            if (category == null) {
+                category = "";
+            }
+
+            if ("system".equals(category) || "official".equals(category)) {
+                isOfficialMsg = true;
+            }
         }
         
         boolean isTopMsg = msg.getWkChannel() != null && msg.getWkChannel().top == 1;
